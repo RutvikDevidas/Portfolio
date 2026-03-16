@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rutvik Devidas portfolio featuring web development, projects, and contact information."
+    />
+    <title>Rutvik Devidas | Portfolio</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body
+    class="min-h-screen bg-neutral-950 text-white antialiased selection:bg-yellow-300 selection:text-black"
+  >
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(250,204,21,0.10),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(56,189,248,0.10),_transparent_24%),linear-gradient(to_bottom,_#050505,_#0b0b0b_45%,_#050505)]"
+      ></div>
+      <div
+        class="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-yellow-400/10 blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- NAVBAR: uses flex for responsive alignment, sticky positioning, and hover transitions on links -->
+    <header
+      class="sticky top-0 z-40 border-b border-white/10 bg-neutral-950/70 backdrop-blur-xl"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between"
+        aria-label="Primary navigation"
+      >
+        <a href="#home" class="group flex items-center gap-4">
+          <img
+            src="logo.png"
+            alt="Rutvik Devidas logo"
+            class="h-16 w-16 rounded-2xl border border-white/10 object-cover shadow-xl shadow-black/30 transition duration-300 group-hover:scale-105 group-hover:border-yellow-400/50"
+          />
+          <div>
+            <p class="text-2xl font-bold tracking-wide text-white">
+              Rutvik Devidas
+            </p>
+            <p class="text-sm text-gray-400">
+              Web Developer and Web App Developer
+            </p>
+          </div>
+        </a>
+
+        <ul
+          class="flex flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/5 p-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-300 shadow-lg shadow-black/20 backdrop-blur"
+        >
+          <li>
+            <a
+              href="#home"
+              class="rounded-full px-4 py-2 transition hover:bg-white/5 hover:text-yellow-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="rounded-full px-4 py-2 transition hover:bg-white/5 hover:text-yellow-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="rounded-full px-4 py-2 transition hover:bg-white/5 hover:text-yellow-300"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="rounded-full px-4 py-2 transition hover:bg-white/5 hover:text-yellow-300"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="rounded-full px-4 py-2 transition hover:bg-white/5 hover:text-yellow-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HOME SECTION: uses grid for the main 2-column layout, flex for buttons/social links, and animation on the resume spinner -->
+    <main id="main-content">
+      <section
+        id="home"
+        class="relative overflow-hidden"
+        aria-labelledby="hero-title"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(250,204,21,0.12),_transparent_45%)]"
+        ></div>
+        <div
+          class="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-28"
+        >
+          <div class="relative z-10 space-y-7">
+            <!-- <p class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-yellow-200 shadow-lg shadow-black/20 backdrop-blur">
+              Building fast, responsive digital experiences
+            </p> -->
+
+            <div class="space-y-4">
+              <h1
+                id="hero-title"
+                class="max-w-2xl text-4xl font-black leading-tight text-white md:text-6xl"
+              >
+                Hello, I'm Rutvik. I design and build products that feel modern.
+              </h1>
+              <p class="max-w-2xl text-lg leading-8 text-gray-300 md:text-xl">
+                I build modern websites and web applications with clean UI,
+                responsive layouts, and practical problem solving to create
+                user-friendly experiences.
+              </p>
+            </div>
+
+            <!-- HERO BUTTONS: flex layout with hover transform effects -->
+            <div class="flex flex-wrap gap-4">
+              <button
+                id="resumeBtn"
+                type="button"
+                onclick="startAnimation()"
+                class="inline-flex items-center rounded-full bg-yellow-400 px-6 py-3 font-semibold text-black shadow-xl shadow-yellow-400/20 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-yellow-300"
+              >
+                <svg
+                  id="spinner"
+                  class="mr-2 hidden h-5 w-5 animate-spin"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    fill="none"
+                    opacity="0.25"
+                  ></circle>
+                  <path
+                    d="M4 12a8 8 0 0 1 8-8"
+                    fill="currentColor"
+                    opacity="0.75"
+                  ></path>
+                </svg>
+                <span id="btnText">View Resume</span>
+              </button>
+
+              <a
+                href="#projects"
+                class="rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/50 hover:bg-yellow-400 hover:text-black"
+              >
+                Explore Projects
+              </a>
+            </div>
+
+            <!-- SOCIAL LINKS: flex-wrap layout with hover lift, border, and color transitions -->
+            <div class="flex flex-wrap gap-3 text-sm text-gray-300">
+              <a
+                href="https://github.com/RutvikDevidas"
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-full border border-white/10 bg-white/5 px-4 py-2 shadow-lg shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/60 hover:bg-white/10 hover:text-yellow-300"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rutvik-devidas-8198342b1/?originalSubdomain=in"
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-full border border-white/10 bg-white/5 px-4 py-2 shadow-lg shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/60 hover:bg-white/10 hover:text-yellow-300"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://www.instagram.com/its.__.rutvik/"
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-full border border-white/10 bg-white/5 px-4 py-2 shadow-lg shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/60 hover:bg-white/10 hover:text-yellow-300"
+              >
+                Instagram
+              </a>
+            </div>
+
+            <!-- HERO INFO CARDS: grid layout that becomes 3 columns on small screens -->
+            <dl class="grid max-w-xl grid-cols-1 gap-4 pt-2 sm:grid-cols-3">
+              <div
+                class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl shadow-black/20 backdrop-blur"
+              >
+                <dt class="text-sm text-gray-400">Focus</dt>
+                <dd class="mt-2 text-lg font-semibold text-yellow-300">
+                  Frontend UI
+                </dd>
+              </div>
+              <div
+                class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl shadow-black/20 backdrop-blur"
+              >
+                <dt class="text-sm text-gray-400">Platform</dt>
+                <dd class="mt-2 text-lg font-semibold text-yellow-300">
+                  Web Applications
+                </dd>
+              </div>
+              <div
+                class="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-xl shadow-black/20 backdrop-blur"
+              >
+                <dt class="text-sm text-gray-400">Approach</dt>
+                <dd class="mt-2 text-lg font-semibold text-yellow-300">
+                  Responsive Build
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="relative z-10 flex justify-center md:justify-end">
+            <div class="relative">
+              <div
+                class="absolute -inset-8 rounded-full bg-yellow-400/15 blur-3xl"
+              ></div>
+              <img
+                src="profile.png"
+                alt="Portrait of Rutvik Devidas"
+                class="relative h-96 w-72 rounded-[2rem] border border-white/10 object-cover shadow-[0_25px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/5 md:h-[30rem] md:w-80"
+              />
+              <!-- <div
+                class="absolute -bottom-5 -left-5 rounded-3xl border border-white/10 bg-neutral-900/80 px-5 py-4 shadow-xl shadow-black/30 backdrop-blur"
+              >
+                <p class="text-xs uppercase tracking-[0.3em] text-gray-400">
+                  Current Focus
+                </p>
+                <p class="mt-2 font-semibold text-white">
+                  Interactive websites and user-first web apps
+                </p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION: uses grid for split content and a glass-style content card -->
+      <section
+        id="about"
+        class="border-y border-white/10 bg-white/[0.02] py-24"
+      >
+        <div
+          class="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1fr_1.3fr]"
+        >
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.35em] text-yellow-400"
+            >
+              About Me
+            </p>
+            <h2 class="mt-4 text-3xl font-bold leading-tight md:text-4xl">
+              A developer who enjoys turning ideas into polished products.
+            </h2>
+          </div>
+          <div
+            class="rounded-[2rem] border border-white/10 bg-white/5 p-8 text-lg leading-8 text-gray-300 shadow-xl shadow-black/20 backdrop-blur"
+          >
+            <p>
+              I enjoy building applications that are not only functional, but
+              also clean, responsive, and easy to use. My work blends frontend
+              development, web app interfaces, and a strong focus on usability.
+            </p>
+            <p class="mt-5">
+              Whether I am creating a portfolio, a healthcare app, or a college
+              event platform, I like shipping work that feels clear, reliable,
+              and visually strong across devices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILL SECTION: uses responsive grid for cards, flex-wrap for tags, and hover transitions on each card -->
+      <section id="skills" class="py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <div
+            class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.35em] text-yellow-400"
+              >
+                Skills
+              </p>
+              <h2 class="mt-3 text-3xl font-bold md:text-4xl">
+                Tools I use to bring projects to life
+              </h2>
+            </div>
+            <p class="max-w-2xl text-gray-400">
+              A mix of programming, design, and collaboration skills that
+              support modern web development.
+            </p>
+          </div>
+
+          <!-- SKILL CARDS GRID: 1 column on mobile, 2 on small screens, 4 on large screens -->
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/50 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(250,204,21,0.10)]"
+            >
+              <h3
+                class="mb-5 text-lg font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                Languages
+              </h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Java</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Python</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >C</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >JavaScript</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >PHP</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Dart</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/50 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(250,204,21,0.10)]"
+            >
+              <h3
+                class="mb-5 text-lg font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                Frontend
+              </h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >HTML</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >CSS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >React</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Vue JS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Bootstrap</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Tailwind CSS</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/50 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(250,204,21,0.10)]"
+            >
+              <h3
+                class="mb-5 text-lg font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                Backend and Data
+              </h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Laravel</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >MySQL</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Git</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/50 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(250,204,21,0.10)]"
+            >
+              <h3
+                class="mb-5 text-lg font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                Design and Teamwork
+              </h3>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Flutter</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Figma</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >MS Word</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Communication</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2"
+                  >Teamwork</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT SECTION: uses responsive grid cards with hover lift/glow and flex-wrap for project tags -->
+      <section
+        id="projects"
+        class="border-y border-white/10 bg-white/[0.02] py-24"
+      >
+        <div class="mx-auto max-w-7xl px-6">
+          <div
+            class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+          >
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.35em] text-yellow-400"
+              >
+                Projects
+              </p>
+              <h2 class="mt-3 text-3xl font-bold md:text-4xl">
+                Selected work that reflects my development style
+              </h2>
+            </div>
+            <p class="max-w-2xl text-gray-400">
+              These projects highlight a balance of user-focused design,
+              responsive interfaces, and practical web functionality.
+            </p>
+          </div>
+
+          <!-- PROJECT CARDS GRID: stacked on mobile, 3 columns on medium screens and above -->
+          <div class="grid gap-6 md:grid-cols-3">
+            <article
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/40 hover:shadow-[0_0_40px_rgba(250,204,21,0.12)]"
+            >
+              <p class="text-sm uppercase tracking-[0.3em] text-gray-500">
+                Flutter App
+              </p>
+              <h3
+                class="mt-4 text-2xl font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                Doctor Appointment App
+              </h3>
+              <p class="mt-4 leading-7 text-gray-400">
+                A healthcare booking experience focused on making appointments,
+                schedules, and patient interactions simple and accessible.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Flutter</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >UI Design</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Mobile</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/40 hover:shadow-[0_0_40px_rgba(250,204,21,0.12)]"
+            >
+              <p class="text-sm uppercase tracking-[0.3em] text-gray-500">
+                Web Project
+              </p>
+              <h3
+                class="mt-4 text-2xl font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                Portfolio Website
+              </h3>
+              <p class="mt-4 leading-7 text-gray-400">
+                A responsive personal website built to present work, skills, and
+                personality through a clean Tailwind-based interface.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Responsive</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Branding</span
+                >
+              </div>
+            </article>
+
+            <article
+              class="group rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-xl shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-2 hover:border-yellow-400/40 hover:shadow-[0_0_40px_rgba(250,204,21,0.12)]"
+            >
+              <p class="text-sm uppercase tracking-[0.3em] text-gray-500">
+                Event Platform
+              </p>
+              <h3
+                class="mt-4 text-2xl font-semibold text-yellow-300 transition group-hover:text-yellow-200"
+              >
+                College Event Website
+              </h3>
+              <p class="mt-4 leading-7 text-gray-400">
+                A festival website created to organize event details, improve
+                visibility, and make participation easier for students.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Frontend</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >Planning</span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-gray-300"
+                  >UX</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION: uses grid for text/form layout, grid inside the form, and focus transitions on inputs -->
+      <section id="contact" class="py-24">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[0.9fr_1.1fr]"
+        >
+          <div class="space-y-5">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.35em] text-yellow-400"
+            >
+              Contact
+            </p>
+            <h2 class="text-3xl font-bold md:text-4xl">
+              Let's build something thoughtful together.
+            </h2>
+            <p class="max-w-xl text-lg leading-8 text-gray-300">
+              If you have a project idea, internship opportunity, or
+              collaboration in mind, I would love to hear about it.
+            </p>
+            <div class="space-y-3 text-gray-400">
+              <p>Available for web and web app development work.</p>
+              <p>Reach out through the form or connect on social platforms.</p>
+            </div>
+          </div>
+
+          <!-- CONTACT FORM: stacked spacing with responsive input grid and button hover effect -->
+          <form
+            class="space-y-6 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl shadow-black/20 backdrop-blur"
+          >
+            <div class="grid gap-6 md:grid-cols-2">
+              <div>
+                <label
+                  for="name"
+                  class="mb-2 block text-sm font-medium text-gray-300"
+                  >Your Name</label
+                >
+                <input
+                  id="name"
+                  type="text"
+                  class="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-gray-500 outline-none transition duration-300 focus:border-yellow-400 focus:bg-black/50"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="mb-2 block text-sm font-medium text-gray-300"
+                  >Email</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  class="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-gray-500 outline-none transition duration-300 focus:border-yellow-400 focus:bg-black/50"
+                  placeholder="Enter your email"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="message"
+                class="mb-2 block text-sm font-medium text-gray-300"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                class="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-gray-500 outline-none transition duration-300 focus:border-yellow-400 focus:bg-black/50"
+                placeholder="Tell me a little about your project or idea"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full rounded-full bg-yellow-400 px-6 py-3 font-semibold text-black shadow-xl shadow-yellow-400/20 transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: uses centered flex-column layout with hover transition on the back-to-top link -->
+    <footer class="border-t border-white/10 bg-black/30 backdrop-blur">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-8 text-center text-sm text-gray-400"
+      >
+        <a
+          href="#home"
+          aria-label="Back to top"
+          class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-white shadow-lg shadow-black/20 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40 hover:text-yellow-300"
+        >
+          <span class="text-xs font-medium uppercase tracking-[0.2em]"
+            >Back to top</span
+          >
+        </a>
+        <p>
+          Developed with Tailwind CSS &copy;
+          <span id="currentYear"></span> Rutvik Devidas.
+        </p>
+      </div>
+    </footer>
+
+    <!-- SCRIPT: controls the resume button spinner animation and sets the current year automatically -->
+    <script>
+      function startAnimation() {
+        const spinner = document.getElementById('spinner');
+        const text = document.getElementById('btnText');
+        const button = document.getElementById('resumeBtn');
+
+        spinner.classList.remove('hidden');
+        text.innerText = 'Preparing...';
+        button.disabled = true;
+        button.classList.add('opacity-80');
+
+        setTimeout(function () {
+          spinner.classList.add('hidden');
+          text.innerText = 'Resume available on request';
+          button.disabled = false;
+          button.classList.remove('opacity-80');
+        }, 1800);
+      }
+
+      document.getElementById('currentYear').innerText =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
